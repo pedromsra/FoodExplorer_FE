@@ -35,19 +35,16 @@ export function NewOrder(){
         }
     ]
 
-    const [meals, setMeals] = useState()
+    const [meals, setMeals] = useState([])
     const [method, setMethod] = useState(tabTitle[0].title)
     const [qrcode, setQrcode] = useState("")
     const [payed, setPayed] = useState(false)
 
     let total = 0
-    if(localStorage.getItem("@foodexplorer:orderMeals")){
-        setMeals(JSON.parse(localStorage.getItem("@foodexplorer:orderMeals")))
-        meals.forEach(meal => {
-            total = total + meal.price
-        })
-    }
-    
+
+    meals.forEach(meal => {
+        total = total + meal.price
+    })
     
 
     function handleDeleteItem(meal_id){
@@ -80,6 +77,7 @@ export function NewOrder(){
     const totalReal = "R$ " + valueSplit[0] + "," + decimals;
 
     useEffect(() => {
+        setMeals(JSON.parse(localStorage.getItem("@foodexplorer:orderMeals")))
         if(!localStorage.getItem("@foodexplorer:PixLocation")){
             async function fetchLocation() {
                 const data = {

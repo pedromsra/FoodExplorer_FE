@@ -1,10 +1,8 @@
-# Food Explorer
+# Food Explorer (Em construção)
 
 ### Front End de desafio final do curso de desenvolvedor web FullStack RocketSeat
 
 #### [Layot sugerido pela RocketSeat no Figma](https://www.figma.com/file/e1vQSjcqcy0QJOhNkeCHW3/food-explorer-v2-(Community)?node-id=5-980&t=cQBZwJ9tgkbJepQQ-0)
-
-## Projeto em desenvolvimento
 
 ## Apresentação
 
@@ -26,6 +24,29 @@
     - Adicionar pratos para compra (na aplicação os pratos adicionados são salvos no localstorage para compor o "carrinho");
     - Ver sua lista de pratos adicionados ("carrinho")
     - Em andamento: pagamento (pix e crédito) e finalização de pedido;
+
+## Imagens e vídeo de funcionamento
+
+### Utitlização
+
+![User](use.gif)
+
+### SignUp
+
+![SignUp](signUp.png)
+
+### SignUp como admin
+
+![SignUpAdm](singUpAdm.png)
+
+### SignIn
+
+![SignIn](signIn.png)
+
+### Home
+
+![Home](start.png)
+
 
 - Pendencias:
   - API Pix funcionando 100%;
