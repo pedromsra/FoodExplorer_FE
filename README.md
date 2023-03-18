@@ -2,9 +2,9 @@
 
 ### Front End de desafio final do curso de desenvolvedor web FullStack RocketSeat
 
-#### [Figma](https://www.figma.com/file/e1vQSjcqcy0QJOhNkeCHW3/food-explorer-v2-(Community)?node-id=5-980&t=cQBZwJ9tgkbJepQQ-0)
+#### [Layot sugerido pela RocketSeat no Figma](https://www.figma.com/file/e1vQSjcqcy0QJOhNkeCHW3/food-explorer-v2-(Community)?node-id=5-980&t=cQBZwJ9tgkbJepQQ-0)
 
-### Em desenvolvimento
+## Projeto em desenvolvimento
 
 ## Apresentação
 
