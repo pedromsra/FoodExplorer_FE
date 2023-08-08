@@ -23,12 +23,12 @@ export function SignIn(){
 
     return (
         <Container>
-            <div>
-                <BsFillHexagonFill className = "logo" />
+            <div className="logo">
+                <BsFillHexagonFill className = "logoIcon" size={50}/>
                 <h1>food explorer</h1>
             </div>
             <Form>
-                <h1>Faça login</h1>
+                <h1 className="login">Faça login</h1>
                 <div>
                     <p>Email</p>
                     <Input type="text" placeholder="Exemplo: maria.silva@exemple.com" onChange={e => setEmail(e.target.value) } />

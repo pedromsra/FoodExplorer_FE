@@ -12,8 +12,6 @@ import Pix from "../../../assets/pix.svg"
 import CreditCard from "../../../assets/creditcard.svg"
 import QRcode from "../../../assets/qrcode.svg"
 
-import Gambe from "../../../assets/100.png"
-
 import {BiReceipt, BiTime, BiCheckCircle, BiRestaurant} from "react-icons/bi";
 
 export function Order(){
@@ -38,14 +36,7 @@ export function Order(){
             <main>
                 <div className="order">
                     <h1>Meu Pedido</h1>
-                    <OrderItems>
-                        <MealsResume title="Risoto de camarão" image={Gambe} value={25.97} quantity={4} />
-                        <MealsResume title="Risoto de camarão" image={Gambe} value={25.97} quantity={4} />
-                        <MealsResume title="Risoto de camarão" image={Gambe} value={25.97} quantity={4} />
-                        <MealsResume title="Risoto de camarão" image={Gambe} value={25.97} quantity={4} />
-                        <MealsResume title="Risoto de camarão" image={Gambe} value={25.97} quantity={4} />
-                        <MealsResume title="Risoto de camarão" image={Gambe} value={25.97} quantity={4} />
-                        <MealsResume title="Risoto de camarão" image={Gambe} value={25.97} quantity={4} />
+                    <OrderItems>screen
                     </OrderItems>
                     <h3 className="total">Total: R$ 727,16</h3>
                 </div>

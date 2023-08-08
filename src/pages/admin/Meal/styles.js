@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -13,11 +13,19 @@ export const Container = styled.div`
 
     main {
         grid-area: main;
-        width: 100%;
-        padding: 2.5rem 12.2rem 4.8rem 12.2rem;
+        width: 100vw;
+        padding: 1.6rem 5.6rem 3.2rem 5.6rem;
 
         
-        
+        @media (max-width:800px) {
+            .buttonEdit {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
     }
 
     .back {
@@ -29,6 +37,10 @@ export const Container = styled.div`
         margin-bottom: 4.2rem;
 
         color: ${({theme}) => theme.COLORS.light_300};
+
+        @media (max-width: 800px) {
+            margin-bottom: 1.6rem;
+        }
     }
 
     .meal {
@@ -37,13 +49,17 @@ export const Container = styled.div`
         align-items: center;
         gap: 4.8rem;
 
+        @media (max-width: 800px){
+            flex-direction: column;
+            gap: 1.6rem;
+        }
     }
 
     img {
-        width: 39rem;
-        height: 39rem;
+        width: clamp(26.4rem, 20rem + 10vw, 39rem);
+        height: clamp(26.4rem, 20rem + 10vw, 39rem);
         border-radius: 50%;
-        object-fit: cover;
+
     }
 
     .mealDescription {
@@ -52,34 +68,54 @@ export const Container = styled.div`
         justify-content: flex-start;
         gap: 2.4rem;
 
+        @media (max-width: 800px) {
+            justify-content: center;
+            align-items: center;
+        }
+
         > h1 {
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 500;
-            font-size: 4rem;
+            font-size: clamp(2.7rem, 0rem + 5vw, 4rem);
             line-height: 140%;
 
             ${({theme}) => theme.COLORS.light_300};
+
+            @media (max-width: 800px) {
+                text-align: center;
+            }@media (max-width: 800px) {
+                text-align: center;
+            }@media (max-width: 800px) {
+                text-align: center;
+            }
         }
 
         > p {
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
-            font-size: 2.4rem;
+            font-size: clamp(1.6rem, 0rem + 3.5vw, 2.4rem);
             line-height: 140%;
+
+            @media (max-width: 800px) {
+                text-align: center;
+            }
         }
 
         .ingredients {
             display: flex;
             flex-direction: row;
             gap: 1.2rem;
+            flex-wrap: wrap;
             margin-bottom: 2.4rem;
-        }
-    }
 
-    .buttonEdit {
-        width: fit-content;
+            @media(max-width: 800px) {
+                gap: 2.4rem;
+                justify-content: center;
+
+            }
+        }
     }
 
 

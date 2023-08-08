@@ -13,6 +13,8 @@ import { QuantitySelector } from "../../../components/QuantitySelector";
 
 import {RiArrowLeftSLine} from "react-icons/ri"
 
+import mealPlaceHolder from "../../../assets/mealPlaceHolder.jpg";
+
 export function Meal() {
 
     const params = useParams();
@@ -20,6 +22,7 @@ export function Meal() {
 
     const [quant, setQuant] = useState(1)
     const [meal, setMeal] = useState({})
+    const [image, setImage] = useState()
 
     function handleOnClickPlus() {
         setQuant(quant + 1)
@@ -65,9 +68,15 @@ export function Meal() {
     useEffect(() => {
         async function fetchMeal(){
             const response = await api.get(`/meals/${params.id}`);
+
             setMeal(response.data);
+            
+            const imageURL = response.data.image ? `${api.defaults.baseURL}/files/${response.data.image}` : mealPlaceHolder
+            setImage(imageURL)
+            console.log(imageURL)
         }
         fetchMeal();
+
     },[])
 
     useEffect(() => {
@@ -95,7 +104,7 @@ export function Meal() {
             <main>
                 <ButtonText onClick={() => handleBack()} className="back" title="voltar" icon={RiArrowLeftSLine} />
                 <div className="meal">
-                    <img src={meal.image} alt="prato de camarão" />
+                    <img src={image} alt="prato de camarão" />
                     <div className="mealDescription">
                         <h1>{meal.title}</h1>
                         <p>{meal.description}</p>

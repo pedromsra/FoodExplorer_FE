@@ -12,7 +12,8 @@ export const Container = styled.section`
     }
     
     .childrensContainer {
-        overflow-x: hidden;
+        width: 100%;
+        overflow-x: scroll;
         overflow-y: hidden;
         display: flex;
         flex-direction: row;
@@ -33,6 +34,10 @@ export const Container = styled.section`
             color: ${({theme}) => theme.COLORS.light_100};
             margin-left: 3rem;
         }
+
+        @media (max-width: 800px) {
+            display: none;
+        }
     }
 
     .right {
@@ -48,6 +53,10 @@ export const Container = styled.section`
             color: ${({theme}) => theme.COLORS.light_100};
             margin-right: 3rem;
         }
+
+        @media (max-width: 800px) {
+            display: none;
+        }
     }
     
     .gradientLeft {
@@ -58,6 +67,10 @@ export const Container = styled.section`
         height: 100%;
         background: ${({theme}) => theme.COLORS.gradients_300};
         transform: matrix(-1, 0, 0, 1, 0, 0);
+
+        @media (max-width: 800px) {
+            display: none;
+    }
     }
 
     .gradientRight {
@@ -67,6 +80,10 @@ export const Container = styled.section`
         width: 28.5rem;
         height: 100%;
         background: ${({theme}) => theme.COLORS.gradients_100};
+
+        @media (max-width: 800px) {
+            display: none;
+        }
     }
 
 

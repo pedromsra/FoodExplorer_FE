@@ -15,7 +15,7 @@ export const Container = styled.div`
     main{
         grid-area: main;
 
-        padding: 3.4rem 12.5rem;
+        padding: 3.4rem clamp(3.5rem, 0rem + 6vw, 12.5rem);
 
         display: flex;
         flex-direction: column;
@@ -28,6 +28,10 @@ export const Container = styled.div`
         flex-direction: row;
         flex-wrap: wrap;
         gap: 4.8rem;
+
+        @media (max-width: 800px) {
+            gap: 0;
+        }
     }
 
     h1 {

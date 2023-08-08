@@ -9,7 +9,7 @@ export const Container = styled.div`
     flex-direction: row;
     align-items: center;
 
-    .logo {
+    .logoIcon  {
         color: ${({theme}) => theme.COLORS.cake_200};
     }
 
@@ -17,25 +17,40 @@ export const Container = styled.div`
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
-        font-size: 4.2rem;
+        font-size: clamp(2.6rem, 2rem + 1.8vw, 4.2rem);
         line-height: 4.9rem;
     }
 
-    > div {
+    .logo {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 2rem;
     }
+
+    @media (max-width: 800px) {
+        padding-top: clamp(10rem, 8rem + 10vw, 15.8rem);
+        flex-direction: column;
+        gap: 7.3rem;
+
+        h1 {
+            line-height: 4.4rem;
+        }
+
+        .logoIcon {
+            width: 4.3rem;
+            height: 4.3rem;
+        }
+    }
 `;
 
 export const Form = styled.div`
-    max-width: clamp(36rem, 18rem + 14vw, 47.6rem);
+    width: clamp(48rem, 24rem + 24vw, 64rem);
     padding: clamp(3rem, 1.5rem + 2vw, 6.4rem);
     display: flex;
     flex-direction: column;
-    gap: clamp(1.5rem, .8rem + 1vw, 3.2rem);
+    gap: 3.2rem;
     align-items: center;
     background-color: ${({theme}) => theme.COLORS.dark_700};
     border-radius: 1.6rem;
@@ -65,6 +80,16 @@ export const Form = styled.div`
     .footerButtons {
         display: flex;
         justify-content: space-between;
+    }
+
+    @media (max-width: 800px) {
+        width: 100%;
+        background: none;
+        padding: 0;
+
+        .singup {
+            display: none;
+        }
     }
 
 `;

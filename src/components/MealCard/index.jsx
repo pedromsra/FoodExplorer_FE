@@ -17,7 +17,7 @@ import {BiChevronRight} from "react-icons/bi"
 
 import mealPlaceHolder from "../../assets/mealPlaceHolder.jpg";
 
-export function MealCard({meal, admin = false, onChange, counterClassName, ...rest}){
+export function MealCard({meal, admin = false, onClickr, onChange, counterClassName, ...rest}){
     const navigate = useNavigate()
 
     const [quant, setQuant] = useState(1)
@@ -50,10 +50,9 @@ export function MealCard({meal, admin = false, onChange, counterClassName, ...re
         } else {
             const old = JSON.parse(localStorage.getItem("@foodexplorer:orderMeals"))
             
-            if(old.length) {
+            if(old.length || Array.isArray(old)) {
                 const oldEdited = old.filter(meal => meal.id !== Number(id))
                 newOrderMeals = oldEdited.map(meal => meal)
-                
                 newOrderMeals = [...newOrderMeals, newOrderMeal]
             } else {
                 if(old.id === Number(id)){
@@ -141,14 +140,16 @@ export function MealCard({meal, admin = false, onChange, counterClassName, ...re
             <p>{meal.description}</p>
             <h2>{valueReal}</h2>
             {!admin && <div className="selector">
-                <button id="reduce" onClick={() => handleOnClickMinus(quant)}>
-                    <FiMinus size = {24} />
-                </button>
-                <input onChange={onChange} type="number" value={Quantity} />
-                <button id="increase" onClick={() => handleOnClickPlus(quant)}>
-                    <FiPlus size = {24} />
-                </button>
-                <Button onClick={() => handleClickAdd({quantity: quant, price: price, title: meal.title, id: meal.id, image: imageURL})} type="submit" title="Incluir" isActive />
+                <div>
+                    <button id="reduce" onClick={() => handleOnClickMinus(quant)}>
+                        <FiMinus size = {24} />
+                    </button>
+                    <input onChange={onChange} type="number" value={Quantity} />
+                    <button id="increase" onClick={() => handleOnClickPlus(quant)}>
+                        <FiPlus size = {24} />
+                    </button>
+                </div>
+                <Button className="addButton" onClick={() => {onClickr(), handleClickAdd({quantity: quant, price: price, title: meal.title, id: meal.id, image: imageURL})}} type="submit" title="Incluir" isActive />
             </div>}
         </Container>
     )

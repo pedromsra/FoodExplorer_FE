@@ -8,6 +8,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: ${({isAdmin}) => isAdmin ? "6.65rem 2.4rem" : "2.4rem"};
     gap: 1.5rem;
     isolation: isolate;
@@ -21,6 +22,11 @@ export const Container = styled.div`
         width: 17.6rem;
         height: 17.6rem;
         border-radius: 50%;
+        
+        @media (max-width: 800px){
+            width: 8.8rem;
+            height: 8.8rem;
+        }
     }
 
     h3, .detailButton {
@@ -45,11 +51,22 @@ export const Container = styled.div`
 
         color: ${({theme}) => theme.COLORS.light_300};
 
+        @media (max-width: 800px){
+                max-width: 16.5rem;
+        }
+
         .title {
             max-width: 24rem;
             height: fit-content;
             white-space: nowrap;
             overflow: hidden;
+
+            @media (max-width: 800px){
+                max-width: 18rem;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 2.4rem;
+            }
         }
     }
 
@@ -78,6 +95,14 @@ export const Container = styled.div`
         text-align: center;
 
         color: ${({theme}) => theme.COLORS.cake_100};
+
+        @media(max-width:800px) {
+            font-family: Roboto;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%; 
+        }
     }
 
     button {
@@ -91,6 +116,8 @@ export const Container = styled.div`
         background: none;
         border: none;
         padding: 0;
+
+        height: fit-content;
     }
 
     input {
@@ -109,6 +136,14 @@ export const Container = styled.div`
         padding: 0;
 
         color: ${({theme}) => theme.COLORS.light_300};
+
+        @media (max-width: 800px){
+            font-family: Roboto;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+        }
     }
 
     input::-webkit-outer-spin-button,
@@ -126,6 +161,34 @@ export const Container = styled.div`
         flex-direction: row;
         align-items: center;
         gap: 1.4rem;
+
+        width: 100%;
+
+        >div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.4rem;
+        }
+        @media (max-width: 800px) {
+            flex-direction: column;
+
+            .addButton {
+                width: 100%;
+                height: 3.2rem;
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        width: 21rem;
+        max-width: 21rem;
+        min-width: 21rem;
+        height: 29.2rem;
+        gap: 1.2rem;
+        p {
+            display: none;
+        }
     }
 
 `;
@@ -140,5 +203,15 @@ export const LikeButton = styled.button`
     background: none;
     border: none;
     color: ${({theme}) => theme.COLORS.light_100};
+
+    @media (max-width: 800px){
+        right: -1rem;
+        top: 0;
+
+        >svg {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
 
 `;

@@ -13,9 +13,10 @@ export const Container = styled.div`
 
     main {
         grid-area: main;
+        
         width: 100%;
 
-        padding: 4rem 12.5rem;
+        padding: clamp(1rem, 0rem + 3vw, 4rem) clamp(3.2rem, 0rem + 5vw, 12.5rem);
 
         display: flex;
         flex-direction: column;
@@ -28,7 +29,7 @@ export const Container = styled.div`
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 700;
-        font-size: 2.4rem;
+        font-size: clamp(1.6rem, 0rem + 1vw, 2.4rem);
         line-height: 140%;
 
         color: ${({theme}) => theme.COLORS.light_300}
@@ -48,9 +49,7 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-
     width: 100%;
-
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
@@ -71,11 +70,17 @@ export const Form = styled.form`
         display: grid;
         gap: 3.2rem;
         grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas:
             "image name type"
             "ingredients ingredients price"
             "description description description"
         ;
+
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .info {
@@ -171,11 +176,11 @@ export const Form = styled.form`
         grid-area: ingredients;
         
         .ingredientsContainer {
-            height: 4.8rem;
+            height: fit-content;
 
             display: flex;
-            flex-direction: row;
             flex-wrap: wrap;
+            flex-direction: row;
             gap: 1.6rem;
 
             padding: .8rem;
@@ -197,9 +202,21 @@ export const Form = styled.form`
         grid-area: description;
     }
 
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3.2rem;
+    }
+
     .saveButton {
         width: fit-content;
         padding: 1.2rem 2.4rem;
         background-color: ${({theme}) => theme.COLORS.tomato_400};
+
+        @media (max-width: 800px) {
+            width: 100%;
+        }
     }
+
 `;

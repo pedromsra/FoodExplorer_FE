@@ -52,12 +52,12 @@ export function SignUp(){
 
     return (
         <Container>
-            <div>
-                <BsFillHexagonFill className = "logo" />
+            <div className="logo">
+                <BsFillHexagonFill className = "logoIcon" size={50} />
                 <h1>food explorer</h1>
             </div>
             <Form>
-                <h1>Crie sua conta</h1>
+                <h1 className="singup">Crie sua conta</h1>
                 <div>
                     <p>Seu nome</p>
                     <Input type="text" placeholder="Exemplo: Maria da Silva" onChange={e => setName(e.target.value)} />

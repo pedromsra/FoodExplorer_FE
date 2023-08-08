@@ -9,8 +9,6 @@ import {Header} from "../../../components/Header";
 import {Footer} from "../../../components/Footer";
 import { FavoriteResume } from "../../../components/FavoriteResume";
 
-import Gambe from "../../../assets/100.png"
-
 export function Favorites(){
     const navigate = useNavigate();
 

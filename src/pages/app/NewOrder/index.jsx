@@ -3,7 +3,7 @@ import {useState, useEffect} from "react"
 import { api } from "../../../services/api";
 
 
-import { Container, OrderItems, PaymentMethods } from "./styles";
+import { Container, OrderItems, PaymentMethods, PaymentArea } from "./styles";
 
 import { useNavigate } from "react-router-dom";
 
@@ -35,17 +35,23 @@ export function NewOrder(){
         }
     ]
 
+    
     const [meals, setMeals] = useState([])
     const [method, setMethod] = useState(tabTitle[0].title)
     const [qrcode, setQrcode] = useState("")
     const [payed, setPayed] = useState(false)
+    const [paySection, setPaySection] = useState(false)
 
     let total = 0
-
-    meals.forEach(meal => {
-        total = total + meal.price
-    })
     
+    console.log(meals)
+    meals && meals.forEach(meal => {
+        if(meal){
+            total = total + meal.price
+        }
+        
+    })
+
 
     function handleDeleteItem(meal_id){
         const myLocalStorage = JSON.parse(localStorage.getItem("@foodexplorer:orderMeals"))
@@ -57,9 +63,16 @@ export function NewOrder(){
             }
         }
         setMeals(newMeals)
-        localStorage.setItem("@foodexplorer:orderMeals", JSON.stringify(newMeals))
-    }
 
+        if(!newMeals){
+            localStorage.removeItem("@foodexplorer:orderMeals")
+            setMeals(null)
+
+        } else {
+            localStorage.setItem("@foodexplorer:orderMeals", JSON.stringify(newMeals))
+        }
+    }
+    
     function handlePayment(){
         setPayed("preparing")
         navigate("/order/1")
@@ -77,27 +90,31 @@ export function NewOrder(){
     const totalReal = "R$ " + valueSplit[0] + "," + decimals;
 
     useEffect(() => {
-        setMeals(JSON.parse(localStorage.getItem("@foodexplorer:orderMeals")))
-        if(!localStorage.getItem("@foodexplorer:PixLocation")){
-            async function fetchLocation() {
-                const data = {
-                    pixValue: "1.00",
-                    pixKey: "pedromsra@gmail.com",
-                    pixMessage: "Referente a nossa última consulta"
-                }
-                const response = await api.post(`/pix`, data)
-                localStorage.setItem("@foodexplorer:PixLocation", JSON.stringify(response.data))
-            }
-            fetchLocation()
+        if(!Array.isArray(JSON.parse(localStorage.getItem("@foodexplorer:orderMeals")))) {
+            let mealsCart = [JSON.parse(localStorage.getItem("@foodexplorer:orderMeals"))]
+            setMeals(mealsCart)
+        } else {
+            setMeals(JSON.parse(localStorage.getItem("@foodexplorer:orderMeals")))
         }
 
-        async function fetchQrcode() {
-            const response = await api.put(`/pix`, {loc_id: JSON.parse(localStorage.getItem("@foodexplorer:PixLocation"))})
-            setQrcode(response.data.imagemQrcode)
-        }
-        fetchQrcode()
+        // async function fetchLocation() {
+        //     const data = {
+        //         pixValue: "1.00",
+        //         pixKey: "pedromsra@gmail.com",
+        //         pixMessage: "Referente a nossa última consulta"
+        //     }
+        //     const response = await api.post(`/pix`, data)
+        //     localStorage.setItem("@foodexplorer:PixLocation", JSON.stringify(response.data))
+        // }
+        // fetchLocation()
+
+        // async function fetchQrcode() {
+        //     const response = await api.put(`/pix`, {loc_id: JSON.parse(localStorage.getItem("@foodexplorer:PixLocation"))})
+        //     setQrcode(response.data.imagemQrcode)
+        // }
+        // fetchQrcode()
     }, [])
-
+    
     return(
         <Container>
             <Header />
@@ -106,12 +123,13 @@ export function NewOrder(){
                     <h1>Meu Pedido</h1>
                     <OrderItems>
                         {meals && meals.map(meal => (
-                            <MealsResume key={String(meal.id)} title={meal.title} image={meal.image} value={meal.price} quantity={meal.quantity} onClick={()=>handleDeleteItem(meal.id)} />
+                            meal && <MealsResume key={String(meal.id)} title={meal.title} image={meal.image} value={meal.price} quantity={meal.quantity} onClick={()=>handleDeleteItem(meal.id)} />
                         ))}
                     </OrderItems>
                     <h3 className="total">{totalReal}</h3>
+                    <Button onClick={() => setPaySection(!paySection)} className="paymentButton" title="Avançar" />
                 </div>
-                <div className="payment">
+                <PaymentArea paySection={paySection} className="payment">
                     <h1>Pagamento</h1>
                     <div className="paymentArea">
                         {
@@ -138,11 +156,11 @@ export function NewOrder(){
                                 <Button title="Finalizar pagamento" icon={BiReceipt} onClick={() => handlePayment()} />
                             </form>
                             <div className="PIXMethod">
-                                <img src={qrcode} alt="" />
+                                <img src={QRcode} alt="" />
                             </div>
                         </PaymentMethods>
                     </div>
-                </div>
+                </PaymentArea>
             </main>
             <Footer />
         </Container>

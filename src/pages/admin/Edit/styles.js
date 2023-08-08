@@ -16,7 +16,7 @@ export const Container = styled.div`
         
         width: 100%;
 
-        padding: 4rem 12.5rem;
+        padding: clamp(1rem, 0rem + 3vw, 4rem) clamp(3.2rem, 0rem + 5vw, 12.5rem);
 
         display: flex;
         flex-direction: column;
@@ -29,7 +29,7 @@ export const Container = styled.div`
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 700;
-        font-size: 2.4rem;
+        font-size: clamp(1.6rem, 0rem + 1vw, 2.4rem);
         line-height: 140%;
 
         color: ${({theme}) => theme.COLORS.light_300}
@@ -76,6 +76,11 @@ export const Form = styled.form`
             "ingredients ingredients price"
             "description description description"
         ;
+
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .info {
