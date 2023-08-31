@@ -1,8 +1,6 @@
-# Food Explorer (Em construção)
+# Food Explorer [> Acesse aqui <](https://fooodexp.netlify.app/)
 
 ### Front End de desafio final do curso de desenvolvedor web FullStack RocketSeat
-
-#### [> Link Aplicação Funcionando - Deploy no Netlify <](https://fooodexp.netlify.app/)
 
 #### [Layot sugerido pela RocketSeat no Figma](https://www.figma.com/file/e1vQSjcqcy0QJOhNkeCHW3/food-explorer-v2-(Community)?node-id=5-980&t=cQBZwJ9tgkbJepQQ-0)
 
