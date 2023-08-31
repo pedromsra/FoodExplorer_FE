@@ -96,23 +96,6 @@ export function NewOrder(){
         } else {
             setMeals(JSON.parse(localStorage.getItem("@foodexplorer:orderMeals")))
         }
-
-        // async function fetchLocation() {
-        //     const data = {
-        //         pixValue: "1.00",
-        //         pixKey: "pedromsra@gmail.com",
-        //         pixMessage: "Referente a nossa última consulta"
-        //     }
-        //     const response = await api.post(`/pix`, data)
-        //     localStorage.setItem("@foodexplorer:PixLocation", JSON.stringify(response.data))
-        // }
-        // fetchLocation()
-
-        // async function fetchQrcode() {
-        //     const response = await api.put(`/pix`, {loc_id: JSON.parse(localStorage.getItem("@foodexplorer:PixLocation"))})
-        //     setQrcode(response.data.imagemQrcode)
-        // }
-        // fetchQrcode()
     }, [])
     
     return(
