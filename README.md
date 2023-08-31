@@ -28,6 +28,17 @@
     - Ver sua lista de pratos adicionados ("carrinho")
     - Em andamento: pagamento (pix e crédito) e finalização de pedido;
 
+### Clonar repositório do github
+
+[Diretório Github: Food Explorer](https://github.com/pedromsra/FoodExplorer_FE)
+
+### Iniciando a aplicação
+
+- Abrir terminal e digitar:
+  - `$ cd /local_da_pasta_onde_a_FE_está_salva`;
+  - `$ npm install`;
+  - `$ npm run dev`
+
 ## Imagens e vídeo de funcionamento
 
 ### Utitlização
