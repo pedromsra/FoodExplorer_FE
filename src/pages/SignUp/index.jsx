@@ -72,7 +72,7 @@ export function SignUp(){
                 </div>
                 <AdminPassword showInput={showAdminInput}>
                     <p>Senha Admnistrador</p>
-                    <Input type="password" placeholder="Digite a Senha de acesso Administrador" onChange={e => setRolePassword(e.target.value)} />
+                    <Input type="password" placeholder="Digite a Senha de acesso Administrador: admin" onChange={e => setRolePassword(e.target.value)} />
                 </AdminPassword>
                 <Button title="Criar conta" onClick={() => handleSignUp()} />
                 <div className="footerButtons">
