@@ -1,4 +1,4 @@
-# Food Explorer [> Acesse aqui <](https://fooodexp.netlify.app/)
+# Food Explorer
 
 ### Front End de desafio final do curso de desenvolvedor web FullStack RocketSeat
 
