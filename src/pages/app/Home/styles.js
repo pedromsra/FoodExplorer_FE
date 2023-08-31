@@ -50,7 +50,7 @@ export const Image = styled.div`
 
     h2 {
         
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: clamp(2rem, 2rem + 1vw, 4rem);
@@ -60,7 +60,7 @@ export const Image = styled.div`
 
     p {
         
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1.6rem;

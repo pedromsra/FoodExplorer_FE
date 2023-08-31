@@ -17,7 +17,7 @@ export const Container = styled.button`
     border: 0;
     border-radius: .5rem;
     
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;

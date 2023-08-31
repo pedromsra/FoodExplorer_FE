@@ -25,7 +25,7 @@ export const Container = styled.div`
     }
 
     .back {
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 24px;
@@ -70,7 +70,7 @@ export const Container = styled.div`
         }
 
         > h1 {
-            font-family: 'Poppins';
+            font-family: 'Poppins', sans-serif;
             font-style: normal;
             font-weight: 500;
             font-size: clamp(2.7rem, 0rem + 5vw, 4rem);
@@ -80,7 +80,7 @@ export const Container = styled.div`
         }
 
         > p {
-            font-family: 'Poppins';
+            font-family: 'Poppins', sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: clamp(1.6rem, 0rem + 3.5vw, 2.4rem);

@@ -13,12 +13,16 @@ export const Container = styled.section`
     
     .childrensContainer {
         width: 100%;
-        overflow-x: scroll;
+        overflow-x: hidden;
         overflow-y: hidden;
         display: flex;
         flex-direction: row;
         gap: 2.7rem;
         scroll-behavior: smooth;
+
+        @media (max-width: 800px) {
+            overflow-x: scroll;
+        }
     }
 
     .left {
@@ -77,7 +81,7 @@ export const Container = styled.section`
         position: absolute;
         right: 0;
         z-index: 1;
-        width: 28.5rem;
+        width: clamp(10rem, 5rem + 2vw, 28.5rem);
         height: 100%;
         background: ${({theme}) => theme.COLORS.gradients_100};
 
@@ -88,7 +92,7 @@ export const Container = styled.section`
 
 
     > h2 {
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 3.2rem;

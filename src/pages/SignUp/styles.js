@@ -14,7 +14,7 @@ export const Container = styled.div`
     }
 
     h1 {
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: clamp(2.6rem, 2rem + 1.8vw, 4.2rem);
@@ -56,7 +56,7 @@ export const Form = styled.div`
     border-radius: 1.6rem;
 
     h1 {
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 3.2rem;

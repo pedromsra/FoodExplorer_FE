@@ -10,7 +10,7 @@ export const Container = styled.div`
     border-radius: .5rem;
 
     p {
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 1.4rem;

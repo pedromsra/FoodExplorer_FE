@@ -35,7 +35,7 @@ export const Container = styled.div`
     }
 
     h1 {
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 3.2rem;

@@ -48,7 +48,7 @@ export const Container = styled.div`
         }
 
         .total {
-            font-family: 'Poppins';
+            font-family: 'Poppins', sans-serif;
             font-style: normal;
             font-weight: 500;
             font-size: 2rem;
@@ -176,7 +176,7 @@ export const PaymentArea = styled.div`
             gap: 1.4rem;
             align-items: center;
             justify-content: center;
-            font-family: 'Roboto';
+            font-family: 'Roboto', sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 1.6rem;

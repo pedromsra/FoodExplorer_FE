@@ -26,7 +26,7 @@ export const Container = styled.div`
     }
 
     h1 {
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 3.2rem;
@@ -44,7 +44,7 @@ export const Container = styled.div`
 
         text-align: start;
 
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 1.4rem;
@@ -71,7 +71,7 @@ export const Container = styled.div`
     td{
         padding: 2.1rem 2.4rem;
 
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1.4rem;

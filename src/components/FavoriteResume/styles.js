@@ -24,7 +24,7 @@ export const Container = styled.div`
     }
 
     .title {
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif, sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 2rem;
@@ -37,7 +37,7 @@ export const Container = styled.div`
     }
 
     button {
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1.2rem;

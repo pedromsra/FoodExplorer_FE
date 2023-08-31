@@ -33,7 +33,7 @@ export const Container = styled.div`
         gap: 1rem;
 
         h3 {
-            font-family: 'Roboto';
+            font-family: 'Roboto', sans-serif;
             font-style: normal;
             font-weight: 700;
             font-size: 2.4rem;
@@ -52,7 +52,7 @@ export const Container = styled.div`
                 vertical-align: baseline;
                 
 
-                font-family: 'Roboto';
+                font-family: 'Roboto', sans-serif;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 1.2rem;

@@ -20,7 +20,7 @@ export const Container = styled.div`
         background: transparent;
         border: 0;
 
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
 

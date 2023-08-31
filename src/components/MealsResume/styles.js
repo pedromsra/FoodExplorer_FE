@@ -31,7 +31,7 @@ export const Container = styled.div`
     }
 
     .quantityTitle {
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 2rem;
@@ -42,7 +42,7 @@ export const Container = styled.div`
 
     .value {
         
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1.2rem;
@@ -53,7 +53,7 @@ export const Container = styled.div`
 
     button {
         width: fit-content;
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1.2rem;

@@ -15,14 +15,14 @@ export const Container = styled.div`
     background-color: ${({theme}) => theme.COLORS.dark_600};
     color: ${({theme}) => theme.COLORS.light_200};
 
-    font-family: 'Roboto';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: clamp(1.2rem, 0rem + .5vw, 1.4rem);
     line-height: 160%;
 
     > div {
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: clamp(1.6rem, 0rem + 1vw, 2.4rem);

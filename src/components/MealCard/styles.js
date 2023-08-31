@@ -34,7 +34,7 @@ export const Container = styled.div`
 
         overflow: hidden;
 
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 2.4rem;
@@ -74,7 +74,7 @@ export const Container = styled.div`
         width: 25.6rem;
         height: 4.4rem;
         overflow: hidden;
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1.4rem;
@@ -86,7 +86,7 @@ export const Container = styled.div`
     }
 
     h2 {
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 3.2rem;
@@ -121,7 +121,7 @@ export const Container = styled.div`
     }
 
     input {
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 2rem;

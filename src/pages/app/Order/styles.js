@@ -31,7 +31,7 @@ export const Container = styled.div`
         flex-direction: column;
 
         .total {
-            font-family: 'Poppins';
+            font-family: 'Poppins', sans-serif;
             font-style: normal;
             font-weight: 500;
             font-size: 2rem;
@@ -85,7 +85,7 @@ export const Container = styled.div`
                 gap: 1.4rem;
                 align-items: center;
                 justify-content: center;
-                font-family: 'Roboto';
+                font-family: 'Roboto', sans-serif;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 1.6rem;
@@ -151,7 +151,7 @@ export const OrderStatus = styled.div`
         .message {
             width: 348px;
 
-            font-family: 'Roboto';
+            font-family: 'Roboto', sans-serif;
             font-style: normal;
             font-weight: 700;
             font-size: 2.4rem;

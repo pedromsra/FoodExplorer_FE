@@ -26,7 +26,7 @@ export const Container = styled.div`
     }
 
     .back {
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: clamp(1.6rem, 0rem + 1vw, 2.4rem);
@@ -36,7 +36,7 @@ export const Container = styled.div`
     }
     
     h1 {
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 3.2rem;
@@ -56,7 +56,7 @@ export const Form = styled.form`
     align-items: flex-end;
 
     p {
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1.6rem;
@@ -107,7 +107,7 @@ export const Form = styled.form`
             border-radius: .8rem;
             background: ${({theme}) => theme.COLORS.dark_800};
 
-            font-family: 'Poppins';
+            font-family: 'Poppins', sans-serif;
             font-style: normal;
             font-weight: 500;
             font-size: 1.4rem;
@@ -147,7 +147,7 @@ export const Form = styled.form`
             width: 100%;
             height: 4.8rem;
     
-            font-family: 'Roboto';
+            font-family: 'Roboto', sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 1.4rem;

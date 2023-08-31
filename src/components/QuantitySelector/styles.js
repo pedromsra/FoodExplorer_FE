@@ -24,7 +24,7 @@ export const Container = styled.section`
     }
 
     input {
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 2rem;
