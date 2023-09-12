@@ -48,7 +48,7 @@
 
 ### Sign Up as Admin
 
-![Sign Up Admin](signUpAdm.png)
+![Sign Up Admin](singUpAdm.png)
 
 ### Sign In
 
