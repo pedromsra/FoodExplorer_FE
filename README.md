@@ -1,66 +1,64 @@
 # Food Explorer
 
-### Front End de desafio final do curso de desenvolvedor web FullStack RocketSeat
+### Front End for the final challenge of the FullStack Web Developer course by RocketSeat
 
-#### [Layot sugerido pela RocketSeat no Figma](https://www.figma.com/file/e1vQSjcqcy0QJOhNkeCHW3/food-explorer-v2-(Community)?node-id=5-980&t=cQBZwJ9tgkbJepQQ-0)
+#### [Layout suggested by RocketSeat in Figma](https://www.figma.com/file/e1vQSjcqcy0QJOhNkeCHW3/food-explorer-v2-(Community)?node-id=5-980&t=cQBZwJ9tgkbJepQQ-0)
 
+## Introduction
 
-## Apresentação
-
-- Projeto desenvolvido com:
+- Project developed using:
   - React v18.2.0;
   - Vite 4.1.0;
   - Styled Components;
-  - Hooks React e Hook desenvolvido para a autenticação do usuário;
-  - Integração de [APIRest](https://github.com/pedromsra/FoodExplorer_API) que desenvolvi em NodeJS (documentação disponível);
-  - API Pix da EFI(GerenciaNet) (em andamento)
+  - React Hooks and a custom hook for user authentication;
+  - Integration with [APIRest](https://github.com/pedromsra/FoodExplorer_API) that I developed in NodeJS (documentation available);
+  - EFI's Pix API (GerenciaNet) (work in progress).
 
-- Principais funcionalidades:
-  - Autenticação de usuário, como Admin e Default;
-  - Como Admin:
-    - Criar e Editar pratos (com upload de imagem);
-  - User:
-    - Favoritar pratos;
-    - Ver detalhes dos pratos;
-    - Adicionar pratos para compra (na aplicação os pratos adicionados são salvos no localstorage para compor o "carrinho");
-    - Ver sua lista de pratos adicionados ("carrinho")
-    - Em andamento: pagamento (pix e crédito) e finalização de pedido;
+- Key features:
+  - User authentication as Admin and Default;
+  - Admin can:
+    - Create and edit dishes (with image uploads);
+  - Users can:
+    - Favorite dishes;
+    - View dish details;
+    - Add dishes to their shopping list (in the application, added dishes are saved in local storage to compose the "cart");
+    - View their list of added dishes ("cart");
+    - Work in progress: payment (Pix and credit) and order completion.
 
-### Clonar repositório do github
+### Clone the GitHub repository
 
-[Diretório Github: Food Explorer](https://github.com/pedromsra/FoodExplorer_FE)
+[GitHub Repository: Food Explorer](https://github.com/pedromsra/FoodExplorer_FE)
 
-### Iniciando a aplicação
+### Starting the application
 
-- Abrir terminal e digitar:
-  - `$ cd /local_da_pasta_onde_a_FE_está_salva`;
+- Open the terminal and type:
+  - `$ cd /path_to_the_folder_where_FE_is_saved`;
   - `$ npm install`;
   - `$ npm run dev`
 
-## Imagens e vídeo de funcionamento
+## Images and Demo
 
-### Utitlização
+### Usage
 
 ![User](use.gif)
 
-### SignUp
+### Sign Up
 
-![SignUp](signUp.png)
+![Sign Up](signUp.png)
 
-### SignUp como admin
+### Sign Up as Admin
 
-![SignUpAdm](singUpAdm.png)
+![Sign Up Admin](signUpAdm.png)
 
-### SignIn
+### Sign In
 
-![SignIn](signIn.png)
+![Sign In](signIn.png)
 
 ### Home
 
 ![Home](start.png)
 
-
-- Pendencias:
-  - API Pix funcionando 100%;
-  - API para pagamento com cartão de crédito;
-  - Refatorar código (aplicar/revisar SOLID);
+- Pending tasks:
+  - 100% functional Pix API;
+  - Payment API with credit card;
+  - Refactor code (apply/review SOLID principles).
